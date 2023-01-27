@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5\\Day5.csproj": {}
+    "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5.csproj": {}
   },
   "projects": {
-    "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5\\Day5.csproj": {
+    "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5\\Day5.csproj",
+        "projectUniqueName": "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5.csproj",
         "projectName": "Day5",
-        "projectPath": "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5\\Day5.csproj",
+        "projectPath": "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5.csproj",
         "packagesPath": "C:\\Users\\hp 2022\\.nuget\\packages\\",
-        "outputPath": "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\Day5\\obj\\",
+        "outputPath": "E:\\Demo Projects\\ITI\\ITI-Assignments\\Day5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp 2022\\AppData\\Roaming\\NuGet\\NuGet.Config",
