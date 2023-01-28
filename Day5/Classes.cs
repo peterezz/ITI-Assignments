@@ -15,6 +15,8 @@ namespace Day5
 
 
         public HiringDate? HiringDate { get; set; }
+        public SecurityLevel SecurityLevel{ get; set; }
+        public Gender Gender { get; set; }
         public int ID
         {
             get { 
@@ -46,8 +48,6 @@ namespace Day5
                     salary = 2500;
             }
         }
-        public SecurityLevel SecurityLevel{ get; set; }
-        public Gender Gender { get; set; }
 
 
 
@@ -57,17 +57,17 @@ namespace Day5
 
         }
     }
-    public class HiringDate
+    public struct HiringDate
     {
-        private string Day;
-        private string Month;
-        private string Year;
+        private string Day="";
+        private string Month="";
+        private string Year = "";
         public HiringDate(string Date)
         {
             string[] date = Date.Split('-');
             if (date.Length == 3)
             {
-                if (int.Parse(date[0]) >= 1 && int.Parse(date[0]) <= 30)
+                if (int.Parse(date[0]) >= 1 && int.Parse(date[0]) <= 31)
                     this.Day = date[0];
                 if (int.Parse(date[1]) >= 1 && int.Parse(date[1]) <= 12)
                     this.Month = date[1];
