@@ -14,7 +14,7 @@ namespace Day5
         private decimal salary;
 
 
-        public HiringDate? HiringDate { get; set; }
+        public HiringDate HiringDate { get; set; }
         public SecurityLevel SecurityLevel{ get; set; }
         public Gender Gender { get; set; }
         public int ID
@@ -67,12 +67,16 @@ namespace Day5
             string[] date = Date.Split('-');
             if (date.Length == 3)
             {
-                if (int.Parse(date[0]) >= 1 && int.Parse(date[0]) <= 31)
-                    this.Day = date[0];
-                if (int.Parse(date[1]) >= 1 && int.Parse(date[1]) <= 12)
-                    this.Month = date[1];
-                if (int.Parse(date[2]) >= 1999)
-                    this.Year = date[2];
+                int day, month, year;
+                if (int.TryParse(date[0], out day) && int.TryParse(date[1], out month) && int.TryParse(date[2], out year))
+                {
+                    if (day >= 1 && day <= 31)
+                        this.Day = date[0];
+                    if (month >= 1 && month <= 12)
+                        this.Month = date[1];
+                    if (year >= 1999)
+                        this.Year = date[2];
+                }
             }
         }
 
@@ -92,7 +96,7 @@ namespace Day5
         }
         public string GetHiringDate()
         {
-            if (this.Day == null || this.Month == null || this.Year == null)
+            if (string.IsNullOrEmpty(this.Day) ||string.IsNullOrEmpty( this.Month )|| string.IsNullOrEmpty( this.Year))
                 return "";
             return $"Hiring Date: {GetHiringDay()}, {GetHiringMonth()} - {GetHiringYear()}";
         }
