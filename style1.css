@@ -1,0 +1,6 @@
+table, th, td {
+    border:1px solid black;
+  }
+ .dayInput, .yearInput{
+    width: 50px;
+  }
