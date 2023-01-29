@@ -1,0 +1,33 @@
+.centerImage{
+    display: block;
+    margin: 0 auto;
+
+}
+.sectionOne{
+    text-align: center;
+}
+.sectionTwo h2{
+    margin: 30px 0;
+}
+.sectionTwo ul{
+    margin-bottom:30px ;
+}
+.sectionThree ol p{
+    color: red;
+    margin-top: 5px;
+}
+.sectionThree .contactUs{
+    display: inline;
+    float: right;
+}
+.footer{
+    margin: 80px auto; 
+}
+.footer .imgCampaign{
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+.footer p{
+    text-align: center;
+}
