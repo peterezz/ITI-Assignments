@@ -1,37 +1,31 @@
-var input1 = 0,
-  input2 = 0,
-  range = 0;
-input1 = +prompt("Please enter a number", "1");
-do {
-  input2 = +prompt("Please enter a number", "0");
-} while (input1 == input2);
-if (confirm("Display odd numbers")) {
-  if (input1 < input2) {
-    for (let i = input1; i <= input2; i++) {
-      if (i % 2 == 1) {
-        console.log(i);
-      }
-    }
-  } else {
-    for (let i = input1; i >= input2; i--) {
-      if (i % 2 == 1) {
-        console.log(i);
-      }
-    }
-  }
-} else {
-  if (input1 > input2) {
-    for (let i = input1; i >= input2; i--) {
-      if (i % 2 == 0) {
-        console.log(i);
-      }
-    }
-  } else if(input1<input2) {
-    for (let i = input2; i >= input1; i--) {
-      if (i % 2 == 0) {
-        console.log(i);
-      }
-      
-    }
+let userInput = [];
+for (let i = 0; i < 5; i++) {
+  do {
+    userInput[i] = +prompt("Enter a number between 1 and 10");
+  } while (isNaN(userInput[i]) || userInput[i] < 1 || userInput[i] > 10);
+}
+document.writeln("<h1>Sorting</h1>");
+document.write("you entered: ");
+
+function displayArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (i == array.length - 1) document.write(array[i]);
+    else document.write(array[i] + ", ");
   }
 }
+
+function SortArray(arr, typeOfSort = "desc") {
+  if (typeOfSort == "desc") {
+    arr.sort((a, b) => b - a); // For descending sort
+  } else if (typeOfSort == "asc") {
+    arr.sort((a, b) => a - b); // For ascending sort
+  }
+
+  return arr;
+}
+
+displayArray(userInput);
+document.write("<br> sort array desc:");
+displayArray(SortArray(userInput, "desc"));
+document.write("<br>sort array asc: ");
+displayArray(SortArray(userInput, "asc"));

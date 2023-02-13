@@ -1,8 +1,10 @@
-var number1=0,Input1=1;
+function dispVal(obj,key){
+alert( 'value= '+ obj[key]);
 
-while(number1<100 && Input1 != 0){
-    Input1 = parseInt(prompt("Please enter a number", "1"));
-    number1 += Input1;
 }
+var emp={
+    nm:"ali",
+    age:20
 
-alert(number1)
+};
+dispVal(emp,'age');
