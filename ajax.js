@@ -15,14 +15,17 @@ function displayartist(band) {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
         data = JSON.parse(xhr.responseText)[band];
-        console.log(data);
+        var option = document.createElement("option");
+        option.innerText = "Please select an artist";
+        option.setAttribute("selected", "selected");
+        option.setAttribute("disabled","disabled");
+        artistList.appendChild(option);  
         for (var i = 0; i < data.length; i++) {
           var option = document.createElement("option");
           option.value = data[i].name;
           option.innerText += data[i].name;
           artistList.appendChild(option);
         }
-        displaysignature(data[0].value);
       } else {
         console.log("failed");
       }
