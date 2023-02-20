@@ -30,25 +30,16 @@ function displayartist(band) {
   };
   xhr.send("");
 }
+
 artistList.onchange = function () {
   displaysignature(artistList.value);
 };
+
 function displaysignature(artist) {
   output.innerHTML = "";
   var signature = "";
-  var txt = "";
-  for (var i = 0; i < data.length; i++) {
+  for (var i = 0; i < data.length; i++)
     if (data[i].name === artist) signature = data[i].value;
-
-    var pElem = this.document.createElement("a");
-
-    if (signature.length == 0) txt = this.document.createTextNode(artist);
-    else txt = this.document.createTextNode(signature);
-
-    pElem.appendChild(txt);
-    pElem.setAttribute("id", "id1");
-    pElem.setAttribute("href", signature);
-  }
-
-  output.appendChild(pElem);
+  if (signature.length == 0) signature = artist;
+  window.open(signature, "_blank");
 }
