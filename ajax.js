@@ -23,7 +23,7 @@ function displayartist(band) {
         for (var i = 0; i < data.length; i++) {
           var option = document.createElement("option");
           option.value = data[i].name;
-          option.innerText += data[i].name;
+          option.innerText = data[i].name;
           artistList.appendChild(option);
         }
       } else {
