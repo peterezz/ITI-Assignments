@@ -1,0 +1,29 @@
+div.box{
+
+width: 400px;
+height: 400px;
+top: 80px;
+border:solid red 1px;
+}
+.sahm{
+    position: absolute;
+top: 350px;
+left: 175px;
+
+    
+}
+.wrda{
+    position: absolute;
+left: 15px;
+    top:150px;
+}
+.frasha{
+    position: absolute;
+    top:150px;
+    left: 350px
+
+}
+.test{
+
+
+}
