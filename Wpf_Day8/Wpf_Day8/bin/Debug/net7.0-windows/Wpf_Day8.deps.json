@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Wpf_Day8/1.0.0": {
+        "runtime": {
+          "Wpf_Day8.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Wpf_Day8/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

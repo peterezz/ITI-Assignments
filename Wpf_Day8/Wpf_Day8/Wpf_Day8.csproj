@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\wallpaperflare.com_wallpaper 02.jpg" />
+    <None Remove="Images\wallpaperflare.com_wallpaper 03.jpg" />
+    <None Remove="Images\wallpaperflare.com_wallpaper 04.jpg" />
+    <None Remove="Images\wallpaperflare.com_wallpaper 05.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\wallpaperflare.com_wallpaper 05.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\wallpaperflare.com_wallpaper 02.jpg" />
+    <Resource Include="Images\wallpaperflare.com_wallpaper 03.jpg" />
+    <Resource Include="Images\wallpaperflare.com_wallpaper 04.jpg" />
+  </ItemGroup>
+
+</Project>
