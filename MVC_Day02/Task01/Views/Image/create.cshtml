@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "create";
+}
+
+<form method="post">
+    Id: <input type="number" name="Id" id="Id" /> <br />
+    Name: <input type="text" name="Name" id="Name" /><br />
+<select name="ImagePath">
+@for ( int i = 1 ; i <= 7 ; i++ )
+{
+    string imagePath = $"/images/{i}.jpg";
+    <option value="@imagePath">@i</option>
+}
+</select>
+    <br />
+    <input type="submit" value="create new model" />
+</form>
+
