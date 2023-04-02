@@ -15,9 +15,10 @@ namespace Task01.Controllers
         [HttpPost]
         public ActionResult create( ImageModel imageModel )
         {
-            model.Id = imageModel.Id;
+            /*model.Id = imageModel.Id;
             model.Name = imageModel.Name;
-            model.ImagePath = imageModel.ImagePath;
+            model.ImagePath = imageModel.ImagePath;*/
+            model = imageModel;
             return RedirectToAction( nameof( preview ) );
         }
         [HttpGet]
