@@ -1,0 +1,8 @@
+﻿@model HandleErrorInfo
+@{
+    ViewBag.Title = "HrErrorPage";
+}
+
+<h2>HrErrorPage</h2>
+<h3 style="color:red">@(Model.Exception.Source) in controller:@(Model.ControllerName) and action @(Model.ActionName)</h3>
+
