@@ -29,6 +29,9 @@ namespace Ado.NetDay09
         {
             dataTable = new DataTable( );
             sqlDataAdapter.Fill( dataTable );
+            SqlCommandBuilder commandBuilder = new( sqlDataAdapter );
+            sqlDataAdapter.InsertCommand = commandBuilder.GetInsertCommand( );
+            sqlDataAdapter.UpdateCommand = commandBuilder.GetUpdateCommand( );
             //ListPrds.ItemsSource = dataTable.AsEnumerable( ).Select( x => x.Field<string>( "ProductName" ) );
             ListPrds.ItemsSource = dataTable.AsDataView( );
             ListPrds.DisplayMemberPath = "ProductName";
@@ -86,6 +89,8 @@ namespace Ado.NetDay09
             dataTable.Rows.Add( dataRow );
             sqlDataAdapter.Update( dataTable );
             btnClearFields_Click( sender , e );
+            ListPrds.ItemsSource = null;
+            LoadPrdNames( sender , e );
 
         }
 
