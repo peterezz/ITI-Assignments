@@ -1,0 +1,53 @@
+﻿@model IEnumerable<MVC_Day7.Models.Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a href="/cars/Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Num)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Manfacture)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manfacture)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new {  carNum = item.Num  }) |
+                    @Html.ActionLink("Details", "Details", new { carNum = item.Num }) |
+                    @Html.ActionLink("Delete", "Delete", new { carNum = item.Num })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
