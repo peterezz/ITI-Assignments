@@ -1,0 +1,110 @@
+﻿<Page x:Class="HotelManagment_Day11.Pages.KitchenWindowPages.TodoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotelManagment_Day11.Pages.KitchenWindowPages"
+      mc:Ignorable="d" 
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        d:DesignHeight="450" d:DesignWidth="898.2" Title="TodoPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Row="0" Grid.Column="0" 
+                Margin="30 0 10 0">
+            <StackPanel>
+                <Label Margin="10 10 0 0" FontSize="16">Name</Label>
+                <WrapPanel>
+                    <TextBox x:Name="TxtFirstname"
+                            mah:TextBoxHelper.Watermark="First" Margin="10 10 0 0"
+                            Width="110"></TextBox>
+                    <TextBox x:Name="TxtLastName" mah:TextBoxHelper.Watermark="Last"
+                            Margin="10 10 0 0" Width="110"></TextBox>
+                </WrapPanel>
+    
+               <Label FontSize="16" Margin="10 10 10 0">Phone number</Label>
+                <TextBox Name="TxtPoneNumber"
+                        mah:TextBoxHelper.Watermark="(999) - 999 - 9999" Margin="10 0 10 0"></TextBox>
+                <WrapPanel>
+                    <StackPanel>
+                        <Label FontSize="16" Margin="10 10 0 0">Room Type</Label>
+                        <TextBox x:Name="TxtRoomType"
+                                mah:TextBoxHelper.Watermark="Room type"
+                                Margin="10 0 0 0" Width="110"></TextBox>
+                    </StackPanel>
+                    <StackPanel>
+                        <Label FontSize="16" Margin="10 10 0 0">Floor number</Label>
+                        <TextBox x:Name="TxtFloorNum" mah:TextBoxHelper.Watermark="Floor #"
+                            Margin="10 0 0 0" Width="110"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <Label FontSize="16" Margin="10 10 0 0">Room #</Label>
+                <TextBox Name="TxtRoomNum" Margin="10 0 10 0"
+                        mah:TextBoxHelper.Watermark="Room #"></TextBox>
+                <WrapPanel Margin="0 10 0 0" />
+            </StackPanel>
+        </ScrollViewer>
+        
+        <ScrollViewer Grid.Row="0" Grid.Column="1" 
+                Margin="0 0 10 0" BorderBrush="Black">
+            <StackPanel>
+                <Label Margin="10 0 0 0" FontSize="20">Todo</Label>
+                <WrapPanel>
+                    <StackPanel>
+                        <Label Margin="10 0 0 0" FontSize="16">Breakfast [QTY]</Label>
+                    <TextBox x:Name="TxtBreakfast"
+                            mah:TextBoxHelper.Watermark="Breakfast" Margin="10 10 0 0"
+                            Width="110"></TextBox>
+                    </StackPanel>
+                    <StackPanel>
+                        <Label Margin="10 0 0 0" FontSize="16">Lunch [QTY]</Label>
+                        <TextBox x:Name="TxtLunch" mah:TextBoxHelper.Watermark="Lunch"
+                            Margin="10 10 0 0" Width="110"></TextBox>
+                    </StackPanel>
+                </WrapPanel>
+                <Label Margin="10 0 0 0" FontSize="16">Dinner [QTY]</Label>
+                <TextBox x:Name="TxtDinner" mah:TextBoxHelper.Watermark="Dinner"
+                        Margin="10 10 0 0"></TextBox>
+                <WrapPanel>
+                    <CheckBox x:Name="CleaingLbl" Content="Cleaning"
+                            Checked="Cleaning_HandleUnchecked"
+                            Unchecked="Cleaing_HandleUnchecked"
+                            Margin="10 10 0 0" />
+                    <CheckBox x:Name="TowelsLbl" Content="Towels"
+                            Checked="TowelsLbl_HandleCheck"
+                            Unchecked="TowelsLbl_HandleUnchecked" Margin="10 10 0 0" />
+                    <CheckBox x:Name="SweetestSurpriseLbl" Content="Sweetest Surprise"
+                            Checked="SweetestSurpriseLbl_HandleCheck"
+                            Unchecked="SweetestSurpriseLbl_HandleUnchecked" Margin="5 10 0 0" />
+                    <CheckBox x:Name="FoodLbl"
+                            Content="Food/Supply status"
+                            Checked="FoodLbl_HandleCheck"
+                            Unchecked="FoodLbl_HandleUnchecked"
+                            Margin="90 20 0 0" />
+                </WrapPanel>
+                <Button Height="30" Name="BtnChangeSection" Content="Change food section" BorderBrush="Turquoise"
+                        Margin="10 30 10 0" FontSize="14"
+                        Click="BtnChangeSection_Click" />
+            </StackPanel>
+        </ScrollViewer>
+        
+        <ScrollViewer Grid.Row="0" Grid.Column="2"
+                Margin="0 0 10 0">
+            <StackPanel>
+                <Label Margin="10 0 0 0" FontSize="20">On the line</Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"></RowDefinition>
+                        <RowDefinition Height="2*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="0" Name="QueueListBox" />
+                    <Button Content="Update changes" Name="btnUpdateChanges"
+                            FontSize="14" Click="btnUpdateChanges_Click" Margin="10 10 10 0" Grid.Row="1"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

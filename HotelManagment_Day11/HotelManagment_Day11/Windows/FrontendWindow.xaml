@@ -1,0 +1,52 @@
+﻿<mah:MetroWindow x:Class="HotelManagment_Day11.Frontend"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:HotelManagment_Day11"
+        mc:Ignorable="d"
+        Title="FRONTEND" Height="545" Width="998"
+        WindowStartupLocation="CenterScreen"
+        
+        Activated="LoadReservationPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            <ColumnDefinition Width="9*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="40" >Frontend</TextBlock>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0 0 0 0">
+            <StackPanel PreviewMouseDown="LoadReservationPage">
+            <TextBlock FontSize="16" > Reservation</TextBlock>
+                <Label FontStyle="Oblique" FontWeight="ExtraBold" Foreground="Blue"
+                        Name="ReservationLbl" Padding="0" Margin="0 -8 0 0">____________________________________</Label>
+            </StackPanel>
+            <StackPanel PreviewMouseDown="LoadUniversalSearchPage">
+                <TextBlock FontSize="16" Margin="20 0 0 0">Universal Search</TextBlock>
+                <Label FontStyle="Oblique" HorizontalAlignment="Right"
+                        FontWeight="ExtraBold" Foreground="White" Padding="0"
+                        Name="UniversalLbl" Margin="0 -8 0 0">_______________________________________________</Label>
+            </StackPanel>
+            <StackPanel PreviewMouseDown="LoadReservationAdvViewPage">
+                <TextBlock FontSize="16" Margin="20 0 0 0">Reservation Adv. view</TextBlock>
+                <Label FontStyle="Oblique" HorizontalAlignment="Right" Name="AdvLbl"
+                        FontWeight="ExtraBold" Foreground="White" Padding="0"
+                        Margin="0 -8 0 0">_______________________________________________________________</Label>
+            </StackPanel>
+            <StackPanel PreviewMouseDown="LoadRoomAvailibiltyPage">
+                <TextBlock FontSize="16" Margin="20 0 0 0">Room availibilty</TextBlock>
+                <Label FontStyle="Oblique" HorizontalAlignment="Right" x:Name="RoomLbl" FontWeight="ExtraBold" Foreground="White"
+                        Padding="0" Margin="0 -8 0 0">______________________________________________</Label>
+            </StackPanel>
+        </StackPanel>
+        <Frame x:Name="MainFrame" Grid.Column="1" Grid.Row="2" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</mah:MetroWindow>

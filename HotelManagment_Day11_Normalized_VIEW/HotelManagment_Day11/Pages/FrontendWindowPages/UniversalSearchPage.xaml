@@ -1,0 +1,24 @@
+﻿<Page x:Class="HotelManagment_Day11.UniversalSearchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotelManagment_Day11"
+      mc:Ignorable="d"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        d:DesignHeight="450" d:DesignWidth="898.2" Title="UniversalSearchPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="TxtSearch" Width="700"/>
+            <Button x:Name="BtnSearch" Content="Search" Margin="30 0 0 0"
+                    Click="BtnSearch_Click"/>
+        </WrapPanel>
+
+        <DataGrid x:Name="SearchResultTable"  Grid.Row="1" Visibility="Hidden" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"></DataGrid>
+    </Grid>
+</Page>
